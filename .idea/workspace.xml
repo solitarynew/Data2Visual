@@ -4,25 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Metamodels/Company.ecore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Metamodels/Total.ecore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/sampleCompany.xmi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformations/ComputeTotal.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformations/ComputeTotal.atl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" afterDir="false" />
+    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="model transformation with code">
+      <change afterPath="$PROJECT_DIR$/Metamodels/graphql.ecore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/graphql.xmi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformations/graphql2view.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformations/graphql2view.atl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Java/sampleCompany_Total.xmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,18 +36,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Administrator/IdeaProjects/Data2Visual/Transformations",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/IdeaProjects/Data2Visual/Transformations&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Transformations" />
+      <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Metamodels" />
+      <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Transformations" />
     </key>
   </component>
@@ -78,8 +86,18 @@
       <option name="presentableId" value="Default" />
       <updated>1678882401031</updated>
       <workItem from="1678882402803" duration="2998000" />
-      <workItem from="1679318911142" duration="1994000" />
+      <workItem from="1679318911142" duration="10196000" />
+      <workItem from="1679398986740" duration="1266000" />
+      <workItem from="1679400280562" duration="1870000" />
     </task>
+    <task id="LOCAL-00001" summary="model transformation with code">
+      <created>1679321003618</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679321003619</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,10 +108,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="model transformation with code" />
+    <option name="LAST_COMMIT_MESSAGE" value="model transformation with code" />
   </component>
 </project>

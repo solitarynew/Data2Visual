@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GraphQL:Schema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:GraphQL="http://www.example.org/GraphQL"
+    xsi:schemaLocation="http://www.example.org/GraphQL GraphQL.ecore"
+    name="schema">
+  <type xsi:type="GraphQL:SystemType"
+      name="BidSecurity">
+    <attribute
+        name="_id"
+        typeName="ID"/>
+    <attribute
+        name="date"
+        isNullable="true"
+        typeName="String"/>
+  </type>
+</GraphQL:Schema>
