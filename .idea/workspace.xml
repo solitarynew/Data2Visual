@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="model transformation with code">
-      <change afterPath="$PROJECT_DIR$/Metamodels/graphql.ecore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/graphql.xmi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformations/graphql2view.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformations/graphql2view.atl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="GraphQL2View case">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/XMIParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Java/sampleCompany_Total.xmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Metamodels/graphql.ecore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,24 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/IdeaProjects/Data2Visual/Transformations&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Administrator/IdeaProjects/Data2Visual/Metamodels",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Transformations" />
       <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Metamodels" />
+      <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Transformations" />
       <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Metamodels" />
       <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Transformations" />
     </key>
   </component>
@@ -89,6 +88,9 @@
       <workItem from="1679318911142" duration="10196000" />
       <workItem from="1679398986740" duration="1266000" />
       <workItem from="1679400280562" duration="1870000" />
+      <workItem from="1679402331335" duration="1806000" />
+      <workItem from="1679404152190" duration="2834000" />
+      <workItem from="1679459234101" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="model transformation with code">
       <created>1679321003618</created>
@@ -97,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679321003619</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="GraphQL2View case">
+      <created>1679402479057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679402479057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +137,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="model transformation with code" />
-    <option name="LAST_COMMIT_MESSAGE" value="model transformation with code" />
+    <MESSAGE value="GraphQL2View case" />
+    <option name="LAST_COMMIT_MESSAGE" value="GraphQL2View case" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

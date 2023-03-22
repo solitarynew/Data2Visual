@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 public class Launcher {
 
-    public void lunch(String inputMetaModel, String outputMetaModel, String inputModel, String outputModel, String altFilePath) {
+    public void lunch(String inputMetaModel, String outputMetaModel, String inputModel, String outputModel, String altFilePath, String inputMetaModelName, String outputMetaModelName) {
         try {
             /*
              * Initializations
@@ -42,8 +42,8 @@ public class Launcher {
             IModel companyModel_Total = modelFactory.newModel(totalMetamodel);
 
             transformationLauncher.initialize(new HashMap<String,Object>());
-            transformationLauncher.addInModel(companyModel, "IN", "GraphQL");
-            transformationLauncher.addOutModel(companyModel_Total, "OUT", "View");
+            transformationLauncher.addInModel(companyModel, "IN", inputMetaModelName);
+            transformationLauncher.addOutModel(companyModel_Total, "OUT", outputMetaModelName);
             transformationLauncher.launch(ILauncher.RUN_MODE, new NullProgressMonitor(), new HashMap<String,Object>(),
                     new FileInputStream(altFilePath));
 

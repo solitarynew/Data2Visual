@@ -57,6 +57,12 @@
             <artifactId>org.eclipse.m2m.atl.engine</artifactId>
             <version>4.7.0</version>
         </dependency>
+        <!-- .xmi file parser -->
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+            <version>2.18.0</version>
+        </dependency>
     </dependencies>
 
 
