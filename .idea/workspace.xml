@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="GraphQL2View case">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/XMIParser.java" afterDir="false" />
+    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Metamodels/graphql.ecore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Metamodels/View.ecore" beforeDir="false" afterPath="$PROJECT_DIR$/Metamodels/View.ecore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/View.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/Models/View.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/XMIParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/XMIParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +39,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Administrator/IdeaProjects/Data2Visual/Metamodels",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Metamodels" />
       <recent name="C:\Users\Administrator\IdeaProjects\Data2Visual\Transformations" />
@@ -90,7 +91,9 @@
       <workItem from="1679400280562" duration="1870000" />
       <workItem from="1679402331335" duration="1806000" />
       <workItem from="1679404152190" duration="2834000" />
-      <workItem from="1679459234101" duration="1183000" />
+      <workItem from="1679459234101" duration="1211000" />
+      <workItem from="1679460462859" duration="2226000" />
+      <workItem from="1679541192140" duration="5196000" />
     </task>
     <task id="LOCAL-00001" summary="model transformation with code">
       <created>1679321003618</created>
@@ -106,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679402479057</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor">
+      <created>1679460444394</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679460444394</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +148,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="model transformation with code" />
     <MESSAGE value="GraphQL2View case" />
-    <option name="LAST_COMMIT_MESSAGE" value="GraphQL2View case" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
