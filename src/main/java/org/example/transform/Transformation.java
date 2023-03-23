@@ -1,4 +1,4 @@
-package org.example.transfrom;
+package org.example.transform;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;

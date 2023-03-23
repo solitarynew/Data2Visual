@@ -1,6 +1,4 @@
-package org.example.transfrom;
-
-import javax.swing.text.View;
+package org.example.transform;
 
 public class TransformationFactory {
     public static TransformationFactory INSTANCE = new TransformationFactory();
