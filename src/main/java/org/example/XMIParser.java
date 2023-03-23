@@ -9,8 +9,10 @@ import GraphQL.impl.GraphQLFactoryImpl;
 import GraphQL.impl.TypeImpl;
 import View.ViewFactory;
 import View.impl.ViewFactoryImpl;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.URIConverter;
@@ -20,7 +22,33 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import java.io.IOException;
 
 public class XMIParser {
-    public static void parse(String path) throws IOException {
+
+    public static XMIParser INSTANCE = new XMIParser();
+
+    private final ResourceSet resourceSet;
+
+    public XMIParser() {
+        this.resourceSet = new ResourceSetImpl();
+        this.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().
+                put("xmi", new XMIResourceFactoryImpl());
+    }
+
+    public void registry(String nsURI, EPackage ePackage) {
+        resourceSet.getPackageRegistry().put(nsURI, ePackage);
+    }
+
+    public EList<EObject> parse(String path) {
+        Resource resource = resourceSet.createResource(URI.createURI(path));
+        try {
+            resource.load(null);
+            return resource.getContents();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static void parseTest(String path) throws IOException {
         // parse the xmi file
 //        ResourceSet resourceSet = new ResourceSetImpl();
 //        Map<String, Object> extensionToFactoryMap = resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap();
@@ -89,7 +117,8 @@ public class XMIParser {
         // 存了一遍可以读取，因为uri自动注册了
 
         // 手动注册uri
-        resourceSet.getPackageRegistry().put("http://www.example.org/View", View.ViewPackage.eINSTANCE);
+        //resourceSet.getPackageRegistry().put("http://www.example.org/View", View.ViewPackage.eINSTANCE);
+        EPackage.Registry.INSTANCE.put("http://www.example.org/View", View.ViewPackage.eINSTANCE);
 
         Resource resource4 = resourceSet.createResource(URI.createURI("Models/View.xmi"));
         try {

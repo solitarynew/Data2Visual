@@ -1,6 +1,13 @@
 package org.example;
 
+import View.ViewFactory;
+import View.ViewPackage;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.example.transfrom.TransformationFactory;
+
 import java.io.IOException;
+import java.util.Map;
 
 public class RunTransfoJava {
 
@@ -21,7 +28,11 @@ public class RunTransfoJava {
                 "Transformations/graphql2view.asm", "GraphQL", "View"
         );
 
-        XMIParser.parse("Models/View.xmi");
+        XMIParser.INSTANCE.registry("http://www.example.org/View", ViewPackage.eINSTANCE);
+        EList<EObject> eObjects = XMIParser.INSTANCE.parse("Models/View.xmi");
+
+        Object view2AntDesignProTransformation = TransformationFactory.INSTANCE.getTransformation("View2AntDesignProTransformation").transform(eObjects);
+        System.out.println(((Map)view2AntDesignProTransformation).get("BidSecurity"));
     }
 
 }

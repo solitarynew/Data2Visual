@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GraphQL:Schema
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:GraphQL="http://www.example.org/GraphQL"
-    xsi:schemaLocation="http://www.example.org/GraphQL GraphQL.ecore"
-    name="schema">
+        xmi:version="2.0"
+        xmlns:xmi="http://www.omg.org/XMI"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:GraphQL="http://www.example.org/GraphQL"
+        xsi:schemaLocation="http://www.example.org/GraphQL GraphQL.ecore"
+        name="schema">
   <type xsi:type="GraphQL:SystemType"
-      name="BidSecurity">
+        name="BidSecurity">
     <attribute
-        name="_id"
-        typeName="ID"/>
+            name="_id"
+            typeName="ID"/>
     <attribute
-        name="date"
-        isNullable="true"
-        typeName="String"/>
+            name="date"
+            isNullable="true"
+            typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType"
+        name="Invoice">
+    <attribute
+            name="_id"
+            typeName="ID"/>
+    <attribute
+            name="comment"
+            isNullable="true"
+            typeName="String"/>
   </type>
 </GraphQL:Schema>

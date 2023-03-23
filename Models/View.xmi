@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<View:Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:View="http://www.example.org/View" name="BidSecurity">
-  <items name="_id" type="ID">
-    <dataIndex>_id</dataIndex>
-  </items>
-  <items name="date" type="String">
-    <dataIndex>date</dataIndex>
-  </items>
-</View:Schema>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:View="http://www.example.org/View">
+  <View:Schema name="BidSecurity">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="Invoice">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+  </View:Schema>
+</xmi:XMI>
