@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<View:Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:View="http://www.example.org/View">
+  <items name="test"/>
+</View:Schema>
