@@ -48,6 +48,16 @@ public class XMIParser {
         return null;
     }
 
+    public void save(String path, EList<EObject> eObjects) {
+        Resource resource = resourceSet.createResource(URI.createURI(path));
+        resource.getContents().addAll(eObjects);
+        try {
+            resource.save(null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void parseTest(String path) throws IOException {
         // parse the xmi file
 //        ResourceSet resourceSet = new ResourceSetImpl();

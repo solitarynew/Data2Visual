@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="ASCII"?>
+<GraphQL:Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GraphQL="http://www.example.org/GraphQL">
+  <type xsi:type="GraphQL:SystemType" name="AdministrationExpenditure">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+    <attribute name="detail" isNullable="true" typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="SalesExpenditure">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+    <attribute name="detail" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="GeneralManagerOfficeExpenditure">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+    <attribute name="detail" isNullable="true" typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="BidSecurity">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="date" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+    <attribute name="client" isNullable="true" typeName="String"/>
+    <attribute name="projectName" isNullable="true" typeName="String"/>
+    <attribute name="expectWithdrawTime" isNullable="true" typeName="String"/>
+    <attribute name="payCompany" isNullable="true" typeName="String"/>
+    <attribute name="receiveCompany" isNullable="true" typeName="String"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="String"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+    <attribute name="recoveryRecords" isArray="true" isNullable="true" typeName="RecoveryRecord"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="RecoveryRecord">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="time" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="bidSecurity" isNullable="true" typeName="BidSecurity"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="CashExpenditure">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="CashIncome">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="AdvancedPayment">
+    <attribute name="id" typeName="ID"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="date" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+    <attribute name="client" isNullable="true" typeName="String"/>
+    <attribute name="contacter" isNullable="true" typeName="String"/>
+    <attribute name="detail" isNullable="true" typeName="String"/>
+    <attribute name="invoiceNumber" isNullable="true" typeName="String"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="UnconfirmedAmount">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="tradeDate" isNullable="true" typeName="String"/>
+    <attribute name="client" isNullable="true" typeName="String"/>
+    <attribute name="clientCompany" isNullable="true" typeName="String"/>
+    <attribute name="company" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="month" isNullable="true" typeName="String"/>
+    <attribute name="details" isArray="true" isNullable="true" typeName="Detail"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="Detail">
+    <attribute name="id" typeName="ID"/>
+    <attribute name="accountID" isNullable="true" typeName="String"/>
+    <attribute name="date" isNullable="true" typeName="String"/>
+    <attribute name="money" isNullable="true" typeName="Float"/>
+    <attribute name="unconfirmedAmount" isNullable="true" typeName="UnconfirmedAmount"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="NormalInvoice">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="date" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+    <attribute name="accType" isNullable="true" typeName="String"/>
+    <attribute name="company" isNullable="true" typeName="String"/>
+    <attribute name="client" isNullable="true" typeName="String"/>
+    <attribute name="contacter" isNullable="true" typeName="String"/>
+    <attribute name="invoiceNumber" isNullable="true" typeName="String"/>
+    <attribute name="product" isNullable="true" typeName="String"/>
+    <attribute name="payDate" isNullable="true" typeName="String"/>
+    <attribute name="payMode" isNullable="true" typeName="String"/>
+    <attribute name="giveMoney" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="paid" isNullable="true" typeName="Boolean"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="normalMoney" isNullable="true" typeName="Float"/>
+    <attribute name="totalMoney" isNullable="true" typeName="Float"/>
+    <attribute name="invoiceDetail" isNullable="true" typeName="InvoiceDetail"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="BorrowingInvoice">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="date" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+    <attribute name="accType" isNullable="true" typeName="String"/>
+    <attribute name="company" isNullable="true" typeName="String"/>
+    <attribute name="client" isNullable="true" typeName="String"/>
+    <attribute name="contacter" isNullable="true" typeName="String"/>
+    <attribute name="invoiceNumber" isNullable="true" typeName="String"/>
+    <attribute name="product" isNullable="true" typeName="String"/>
+    <attribute name="payDate" isNullable="true" typeName="String"/>
+    <attribute name="payMode" isNullable="true" typeName="String"/>
+    <attribute name="giveMoney" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="paid" isNullable="true" typeName="Boolean"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="rentMoney" isNullable="true" typeName="Float"/>
+    <attribute name="totalMoney" isNullable="true" typeName="Float"/>
+    <attribute name="invoiceDetail" isNullable="true" typeName="InvoiceDetail"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="NormalAndBorrowingInvoice">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="date" isNullable="true" typeName="String"/>
+    <attribute name="saler" isNullable="true" typeName="String"/>
+    <attribute name="accType" isNullable="true" typeName="String"/>
+    <attribute name="company" isNullable="true" typeName="String"/>
+    <attribute name="client" isNullable="true" typeName="String"/>
+    <attribute name="contacter" isNullable="true" typeName="String"/>
+    <attribute name="invoiceNumber" isNullable="true" typeName="String"/>
+    <attribute name="product" isNullable="true" typeName="String"/>
+    <attribute name="payDate" isNullable="true" typeName="String"/>
+    <attribute name="payMode" isNullable="true" typeName="String"/>
+    <attribute name="giveMoney" isNullable="true" typeName="Float"/>
+    <attribute name="comment" isNullable="true" typeName="String"/>
+    <attribute name="paid" isNullable="true" typeName="Boolean"/>
+    <attribute name="createAt" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="serialNumber" isNullable="true" typeName="String"/>
+    <attribute name="dlt" isNullable="true" typeName="Boolean"/>
+    <attribute name="normalMoney" isNullable="true" typeName="Float"/>
+    <attribute name="rentMoney" isNullable="true" typeName="Float"/>
+    <attribute name="totalMoney" isNullable="true" typeName="Float"/>
+    <attribute name="MoneySum" isNullable="true" typeName="Float"/>
+    <attribute name="normalInvoiceDetail" isNullable="true" typeName="InvoiceDetail"/>
+    <attribute name="borrowingInvoiceDetail" isNullable="true" typeName="InvoiceDetail"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="InvoiceDetail">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="OutgoingMoney" isNullable="true" typeName="Float"/>
+    <attribute name="invoice" isNullable="true" typeName="Invoice"/>
+    <attribute name="storeItemSchemas" isArray="true" isNullable="true" typeName="StoreItemSchema"/>
+  </type>
+  <type xsi:type="GraphQL:SystemType" name="StoreItemSchema">
+    <attribute name="_id" typeName="ID"/>
+    <attribute name="IngoingNumber" isNullable="true" typeName="String"/>
+    <attribute name="OutgoingNumber" isNullable="true" typeName="String"/>
+    <attribute name="OutgoingDate" isNullable="true" typeName="_Neo4jDateTime"/>
+    <attribute name="Money" isNullable="true" typeName="Float"/>
+    <attribute name="invoiceDetail" isNullable="true" typeName="InvoiceDetail"/>
+  </type>
+</GraphQL:Schema>
