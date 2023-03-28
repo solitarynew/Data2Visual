@@ -5,6 +5,7 @@ import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.example.transform.compiler.AltToAsmConverter;
 import org.example.transform.Transformation;
 import org.example.transform.TransformationFactory;
 
@@ -24,7 +25,14 @@ public class RunTransfoJava {
 //                "Transformations/computeTotal.asm"
 //        );
 
+//        AtlCompiler.getCompiler("atl2010")
+//                .compile(new FileInputStream("Transformations/GraphQL2View.atl"), "Transformations/GraphQL2View.asm");
 
+        try {
+            AltToAsmConverter.INSTANCE.convert("Transformations/GraphQL2View.atl");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         launcher.lunch(
                 "MetaModels/GraphQL.ecore",
@@ -50,5 +58,7 @@ public class RunTransfoJava {
         EList<EObject> res2 = transformation.transform(typeDefinitionRegistry);
         XMIParser.INSTANCE.save("c.xmi", res2);
     }
+
+
 
 }
