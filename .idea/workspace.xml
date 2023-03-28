@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="package rename">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transform/EOperationDataFetcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transform/EStructuralFeatureDataFetcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transform/Schema2GraphQLTransformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/transform/SchemaGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/type.graphql" afterDir="false" />
+    <list default="true" id="712949d3-ec19-4510-9c32-31ba67c9e890" name="变更" comment="Schema2GraphQLTransformation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformations/GraphQL2VIew.asm" beforeDir="false" afterPath="$PROJECT_DIR$/Transformations/GraphQL2VIew.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RunTransfoJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/XMIParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/XMIParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/transform/Transformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/transform/Transformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/transform/TransformationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/transform/TransformationFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +99,8 @@
       <workItem from="1679571903871" duration="681000" />
       <workItem from="1679575427596" duration="4619000" />
       <workItem from="1679630976526" duration="2743000" />
-      <workItem from="1679633758332" duration="1003000" />
+      <workItem from="1679633758332" duration="3015000" />
+      <workItem from="1679979390029" duration="1885000" />
     </task>
     <task id="LOCAL-00001" summary="model transformation with code">
       <created>1679321003618</created>
@@ -165,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679573635557</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Schema2GraphQLTransformation">
+      <created>1679634900209</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679634900209</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +203,8 @@
     <MESSAGE value="View2AntDesignProTransformation" />
     <MESSAGE value="View2AntDesignProTransformation shelves" />
     <MESSAGE value="package rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="package rename" />
+    <MESSAGE value="Schema2GraphQLTransformation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Schema2GraphQLTransformation" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

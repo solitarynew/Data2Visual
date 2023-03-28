@@ -23,12 +23,15 @@ public class RunTransfoJava {
 //                "Models/Java/sampleCompany_Total.xmi",
 //                "Transformations/computeTotal.asm"
 //        );
+
+
+
         launcher.lunch(
                 "MetaModels/GraphQL.ecore",
                 "MetaModels/View.ecore",
                 "Models/GraphQL.xmi",
                 "Models/View.xmi",
-                "Transformations/graphql2view.asm", "GraphQL", "View"
+                "Transformations/GraphQL2View.asm", "GraphQL", "View"
         );
 
         XMIParser.INSTANCE.registry("http://www.example.org/View", ViewPackage.eINSTANCE);
