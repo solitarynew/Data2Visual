@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class RunTransfoJava {
 
-    public static void main1(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         Launcher launcher = new Launcher();
 //        launcher.lunch(
 //                "MetaModels/company.ecore",
@@ -56,20 +56,20 @@ public class RunTransfoJava {
         Transformation transformation = TransformationFactory.INSTANCE
                 .getTransformation(TransformationFactory.TransformationType.Schema2GraphQLTransformation);
         // 读取resource文件夹下的文件
-        String schema = new String(RunTransfoJava.class.getResourceAsStream("/type.graphql").readAllBytes(), StandardCharsets.UTF_8);
-        TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
-        SchemaBuilder schemaBuilder = new SchemaBuilder(typeDefinitionRegistry, new SchemaConfig(
-                new SchemaConfig.CRUDConfig(),
-                new SchemaConfig.CRUDConfig(true, List.of()),
-                false, true, SchemaConfig.InputStyle.INPUT_TYPE, true, true));
-        schemaBuilder.augmentTypes();
-
-        EList<EObject> res2 = transformation.transform(typeDefinitionRegistry);
-        XMIParser.INSTANCE.save("c.xmi", res2);
+//        String schema = new String(RunTransfoJava.class.getResourceAsStream("/type.graphql").readAllBytes(), StandardCharsets.UTF_8);
+//        TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
+//        SchemaBuilder schemaBuilder = new SchemaBuilder(typeDefinitionRegistry, new SchemaConfig(
+//                new SchemaConfig.CRUDConfig(),
+//                new SchemaConfig.CRUDConfig(true, List.of()),
+//                false, true, SchemaConfig.InputStyle.INPUT_TYPE, true, true));
+//        schemaBuilder.augmentTypes();
+//
+//        EList<EObject> res2 = transformation.transform(typeDefinitionRegistry);
+//        XMIParser.INSTANCE.save("c.xmi", res2);
     }
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main1(String[] args) throws IOException {
         String schema = new String(RunTransfoJava.class.getResourceAsStream("/type.graphql").readAllBytes(), StandardCharsets.UTF_8);
         TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
         EList<EObject> eObjects = TransformationFactory.INSTANCE

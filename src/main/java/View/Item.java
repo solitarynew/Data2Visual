@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link View.Item#getName <em>Name</em>}</li>
  *   <li>{@link View.Item#getDataIndex <em>Data Index</em>}</li>
  *   <li>{@link View.Item#getType <em>Type</em>}</li>
+ *   <li>{@link View.Item#getInformation <em>Information</em>}</li>
  * </ul>
  *
  * @see View.ViewPackage#getItem()
@@ -80,5 +81,27 @@ public interface Item extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Information</em>' attribute.
+	 * @see #setInformation(Object)
+	 * @see View.ViewPackage#getItem_Information()
+	 * @model
+	 * @generated
+	 */
+	Object getInformation();
+
+	/**
+	 * Sets the value of the '{@link View.Item#getInformation <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Information</em>' attribute.
+	 * @see #getInformation()
+	 * @generated
+	 */
+	void setInformation(Object value);
 
 } // Item

@@ -163,6 +163,15 @@ public class ViewPackageImpl extends EPackageImpl implements ViewPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getItem_Information() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ViewFactory getViewFactory() {
 		return (ViewFactory)getEFactoryInstance();
 	}
@@ -194,6 +203,7 @@ public class ViewPackageImpl extends EPackageImpl implements ViewPackage {
 		createEAttribute(itemEClass, ITEM__NAME);
 		createEAttribute(itemEClass, ITEM__DATA_INDEX);
 		createEAttribute(itemEClass, ITEM__TYPE);
+		createEAttribute(itemEClass, ITEM__INFORMATION);
 	}
 
 	/**
@@ -234,6 +244,7 @@ public class ViewPackageImpl extends EPackageImpl implements ViewPackage {
 		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getItem_DataIndex(), ecorePackage.getEString(), "dataIndex", null, 1, -1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getItem_Type(), ecorePackage.getEString(), "type", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Information(), ecorePackage.getEJavaObject(), "information", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

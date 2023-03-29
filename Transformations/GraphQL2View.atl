@@ -6,15 +6,16 @@ create OUT : View from IN : GraphQL;
 
 rule Type2Schema {
 	from 
-			s: GraphQL!Type
+			s: GraphQL!ObjectType
 	to
 			t: View!Schema (
 				name <- s.name,
-				items <- s.attribute
+				items <- s.attribute->collect(a | thisModule.Attribute2Item(a))
 			)
 }
 
-rule Attribute2Item {
+
+lazy rule Attribute2Item {
 	from 
 			s: GraphQL!Attribute
 	to

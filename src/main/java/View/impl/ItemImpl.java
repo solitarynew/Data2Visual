@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link View.impl.ItemImpl#getName <em>Name</em>}</li>
  *   <li>{@link View.impl.ItemImpl#getDataIndex <em>Data Index</em>}</li>
  *   <li>{@link View.impl.ItemImpl#getType <em>Type</em>}</li>
+ *   <li>{@link View.impl.ItemImpl#getInformation <em>Information</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +84,26 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInformation() <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Object INFORMATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInformation() <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Object information = INFORMATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,6 +183,27 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Object getInformation() {
+		return information;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInformation(Object newInformation) {
+		Object oldInformation = information;
+		information = newInformation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ViewPackage.ITEM__INFORMATION, oldInformation, information));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -171,6 +213,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 				return getDataIndex();
 			case ViewPackage.ITEM__TYPE:
 				return getType();
+			case ViewPackage.ITEM__INFORMATION:
+				return getInformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -194,6 +238,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case ViewPackage.ITEM__TYPE:
 				setType((String)newValue);
 				return;
+			case ViewPackage.ITEM__INFORMATION:
+				setInformation(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -215,6 +262,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case ViewPackage.ITEM__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
+			case ViewPackage.ITEM__INFORMATION:
+				setInformation(INFORMATION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -233,6 +283,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 				return dataIndex != null && !dataIndex.isEmpty();
 			case ViewPackage.ITEM__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case ViewPackage.ITEM__INFORMATION:
+				return INFORMATION_EDEFAULT == null ? information != null : !INFORMATION_EDEFAULT.equals(information);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -253,6 +305,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 		result.append(dataIndex);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", information: ");
+		result.append(information);
 		result.append(')');
 		return result.toString();
 	}

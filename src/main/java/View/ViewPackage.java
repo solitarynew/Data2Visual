@@ -140,13 +140,22 @@ public interface ViewPackage extends EPackage {
 	int ITEM__TYPE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__INFORMATION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_FEATURE_COUNT = 3;
+	int ITEM_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Item</em>' class.
@@ -234,6 +243,17 @@ public interface ViewPackage extends EPackage {
 	EAttribute getItem_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link View.Item#getInformation <em>Information</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Information</em>'.
+	 * @see View.Item#getInformation()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Information();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -315,6 +335,14 @@ public interface ViewPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ITEM__TYPE = eINSTANCE.getItem_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Information</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__INFORMATION = eINSTANCE.getItem_Information();
 
 	}
 
