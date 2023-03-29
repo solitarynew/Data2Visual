@@ -4,14 +4,18 @@ import View.Item;
 import View.Schema;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class View2AntDesignProTransformation implements Transformation{
+
+
 
     public View2AntDesignProTransformation() {
         // set defaultFromItemPros
@@ -59,26 +63,44 @@ public class View2AntDesignProTransformation implements Transformation{
     private final String defaultWidth = "md";
     private final JsonObject defaultColProps = new JsonObject();
 
+    private final List<String> IgnoreFields = List.of("_id");
 
     @Override
-    public Map<String, JsonArray> transform(EList<EObject> o) {
-        Map<String, JsonArray> map = new HashMap<>();
+    public Map<String, Pair<JsonArray, JsonArray>> transform(EList<EObject> o) {
+        Map<String, Pair<JsonArray, JsonArray>> map = new HashMap<>();
         for (EObject eObject : o) {
             if (eObject instanceof Schema) {
                 Schema schema = (Schema) eObject;
-                JsonArray jsonArray = new JsonArray();
+                JsonArray mutationJsonArray = new JsonArray();
+                JsonArray queryJsonArray = new JsonArray();
                 EList<Item> items = schema.getItems();
                 for (Item item : items) {
-                    JsonObject jsonObject = new JsonObject();
-                    jsonObject.addProperty(TITLE, item.getName());
-                    jsonObject.addProperty(DATA_INDEX, item.getName());
-                    jsonObject.addProperty(VALUE_TYPE, ValueType.fromViewType(item.getType()).getValue());
-                    jsonObject.add(FROM_ITEM_PROPS, defaultFromItemPros);
-                    jsonObject.addProperty(WIDTH, defaultWidth);
-                    jsonObject.add(COL_PROPS, defaultColProps);
-                    jsonArray.add(jsonObject);
+                    if (IgnoreFields.contains(item.getName())) {
+                        continue;
+                    }
+                    JsonObject mutationJsonObject = new JsonObject();
+                    mutationJsonObject.addProperty(TITLE, item.getName());
+                    mutationJsonObject.addProperty(DATA_INDEX, item.getName());
+                    mutationJsonObject.addProperty(VALUE_TYPE, ValueType.fromViewType(item.getType()).getValue());
+                    mutationJsonObject.add(FROM_ITEM_PROPS, defaultFromItemPros);
+                    mutationJsonObject.addProperty(WIDTH, defaultWidth);
+                    mutationJsonObject.add(COL_PROPS, defaultColProps);
+                    mutationJsonArray.add(mutationJsonObject);
+
+                    JsonObject queryJsonObject = new JsonObject();
+                    queryJsonObject.addProperty(TITLE, item.getName());
+                    JsonArray dataIndex = new JsonArray();
+                    dataIndex.add(schema.getName());
+                    dataIndex.add("0");
+                    dataIndex.add(item.getName());
+                    queryJsonObject.add(DATA_INDEX, dataIndex);
+                    queryJsonObject.addProperty(VALUE_TYPE, ValueType.fromViewType(item.getType()).getValue());
+                    queryJsonObject.add(FROM_ITEM_PROPS, defaultFromItemPros);
+                    queryJsonObject.addProperty(WIDTH, defaultWidth);
+                    queryJsonObject.add(COL_PROPS, defaultColProps);
+                    queryJsonArray.add(queryJsonObject);
                 }
-                map.put(schema.getName(), jsonArray);
+                map.put(schema.getName(), Pair.of(mutationJsonArray, queryJsonArray));
             }
         }
         return map;
