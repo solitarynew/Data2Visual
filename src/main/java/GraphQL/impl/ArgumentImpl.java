@@ -2,10 +2,8 @@
  */
 package GraphQL.impl;
 
-import GraphQL.EnumValue;
+import GraphQL.Argument;
 import GraphQL.GraphQLPackage;
-
-import java.lang.String;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,19 +14,39 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Enum Value</b></em>'.
+ * An implementation of the model object '<em><b>Argument</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link GraphQL.impl.EnumValueImpl#getValue <em>Value</em>}</li>
- *   <li>{@link GraphQL.impl.EnumValueImpl#getNumber <em>Number</em>}</li>
+ *   <li>{@link GraphQL.impl.ArgumentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link GraphQL.impl.ArgumentImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumValue {
+public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argument {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -37,7 +55,7 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final Object VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -47,34 +65,14 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNumber() <em>Number</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNumber()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int NUMBER_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getNumber() <em>Number</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNumber()
-	 * @generated
-	 * @ordered
-	 */
-	protected int number = NUMBER_EDEFAULT;
+	protected Object value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnumValueImpl() {
+	protected ArgumentImpl() {
 		super();
 	}
 
@@ -85,7 +83,7 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GraphQLPackage.Literals.ENUM_VALUE;
+		return GraphQLPackage.Literals.ARGUMENT;
 	}
 
 	/**
@@ -93,7 +91,28 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphQLPackage.ARGUMENT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object getValue() {
 		return value;
 	}
 
@@ -102,32 +121,11 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
+	public void setValue(Object newValue) {
+		Object oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GraphQLPackage.ENUM_VALUE__VALUE, oldValue, value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getNumber() {
-		return number;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNumber(int newNumber) {
-		int oldNumber = number;
-		number = newNumber;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GraphQLPackage.ENUM_VALUE__NUMBER, oldNumber, number));
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphQLPackage.ARGUMENT__VALUE, oldValue, value));
 	}
 
 	/**
@@ -138,10 +136,10 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM_VALUE__VALUE:
+			case GraphQLPackage.ARGUMENT__NAME:
+				return getName();
+			case GraphQLPackage.ARGUMENT__VALUE:
 				return getValue();
-			case GraphQLPackage.ENUM_VALUE__NUMBER:
-				return getNumber();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,11 +152,11 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM_VALUE__VALUE:
-				setValue((String)newValue);
+			case GraphQLPackage.ARGUMENT__NAME:
+				setName((String)newValue);
 				return;
-			case GraphQLPackage.ENUM_VALUE__NUMBER:
-				setNumber((Integer)newValue);
+			case GraphQLPackage.ARGUMENT__VALUE:
+				setValue(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -172,11 +170,11 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM_VALUE__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case GraphQLPackage.ARGUMENT__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case GraphQLPackage.ENUM_VALUE__NUMBER:
-				setNumber(NUMBER_EDEFAULT);
+			case GraphQLPackage.ARGUMENT__VALUE:
+				setValue(VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -190,10 +188,10 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM_VALUE__VALUE:
+			case GraphQLPackage.ARGUMENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case GraphQLPackage.ARGUMENT__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case GraphQLPackage.ENUM_VALUE__NUMBER:
-				return number != NUMBER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -208,12 +206,12 @@ public class EnumValueImpl extends MinimalEObjectImpl.Container implements EnumV
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", value: ");
 		result.append(value);
-		result.append(", number: ");
-		result.append(number);
 		result.append(')');
 		return result.toString();
 	}
 
-} //EnumValueImpl
+} //ArgumentImpl

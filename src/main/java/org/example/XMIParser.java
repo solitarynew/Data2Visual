@@ -2,20 +2,15 @@ package org.example;
 
 
 import GraphQL.Attribute;
+import GraphQL.ObjectType;
 import GraphQL.Schema;
-import GraphQL.SystemType;
-import GraphQL.Type;
 import GraphQL.impl.GraphQLFactoryImpl;
-import GraphQL.impl.TypeImpl;
-import View.ViewFactory;
-import View.impl.ViewFactoryImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.URIConverter;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
@@ -67,13 +62,13 @@ public class XMIParser {
 //        Resource resource = resourceSet.createResource(URI.createFileURI(path));
 //        resource.load(null);
         Schema schema = GraphQLFactoryImpl.eINSTANCE.createSchema();
-        SystemType systemType = GraphQLFactoryImpl.eINSTANCE.createSystemType();
-        systemType.setName("test");
+        ObjectType objectType = GraphQLFactoryImpl.eINSTANCE.createObjectType();
+        objectType.setName("test");
         Attribute attribute = GraphQLFactoryImpl.eINSTANCE.createAttribute();
         attribute.setName("attr1");
         attribute.setTypeName("String");
-        systemType.getAttribute().add(attribute);
-        schema.getType().add(systemType);
+        objectType.getAttribute().add(attribute);
+        schema.getType().add(objectType);
         ResourceSet resourceSet = new ResourceSetImpl();
         resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().
                 put("xmi", new XMIResourceFactoryImpl());

@@ -80,6 +80,11 @@
             <artifactId>org.eclipse.core.runtime</artifactId>
             <version>3.26.100</version>
         </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-graphql-java</artifactId>
+            <version>1.7.0</version>
+        </dependency>
     </dependencies>
 
 

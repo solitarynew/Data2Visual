@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class ScalarTypeImpl extends TypeImpl implements ScalarType {
+public class ScalarTypeImpl extends TypeImpl implements ScalarType {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

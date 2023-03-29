@@ -2,14 +2,7 @@
  */
 package GraphQL.impl;
 
-import GraphQL.Attribute;
-import GraphQL.EnumValue;
-import GraphQL.GraphQLFactory;
-import GraphQL.GraphQLPackage;
-import GraphQL.ID;
-import GraphQL.Int;
-import GraphQL.Schema;
-import GraphQL.SystemType;
+import GraphQL.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -65,14 +58,12 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 		switch (eClass.getClassifierID()) {
 			case GraphQLPackage.ATTRIBUTE: return createAttribute();
 			case GraphQLPackage.SCHEMA: return createSchema();
-			case GraphQLPackage.SYSTEM_TYPE: return createSystemType();
-			case GraphQLPackage.INT: return createInt();
-			case GraphQLPackage.FLOAT: return createFloat();
-			case GraphQLPackage.STRING: return createString();
-			case GraphQLPackage.BOOLEAN: return createBoolean();
-			case GraphQLPackage.ID: return createID();
-			case GraphQLPackage.ENUM: return createEnum();
-			case GraphQLPackage.ENUM_VALUE: return createEnumValue();
+			case GraphQLPackage.DIRECTIVE: return createDirective();
+			case GraphQLPackage.ARGUMENT: return createArgument();
+			case GraphQLPackage.OBJECT_TYPE: return createObjectType();
+			case GraphQLPackage.INTERFACE_TYPE: return createInterfaceType();
+			case GraphQLPackage.ENUM_TYPE: return createEnumType();
+			case GraphQLPackage.SCALAR_TYPE: return createScalarType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -103,9 +94,9 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemType createSystemType() {
-		SystemTypeImpl systemType = new SystemTypeImpl();
-		return systemType;
+	public Directive createDirective() {
+		DirectiveImpl directive = new DirectiveImpl();
+		return directive;
 	}
 
 	/**
@@ -113,9 +104,9 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Int createInt() {
-		IntImpl int_ = new IntImpl();
-		return int_;
+	public Argument createArgument() {
+		ArgumentImpl argument = new ArgumentImpl();
+		return argument;
 	}
 
 	/**
@@ -123,9 +114,9 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GraphQL.Float createFloat() {
-		FloatImpl float_ = new FloatImpl();
-		return float_;
+	public ObjectType createObjectType() {
+		ObjectTypeImpl objectType = new ObjectTypeImpl();
+		return objectType;
 	}
 
 	/**
@@ -133,9 +124,9 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GraphQL.String createString() {
-		StringImpl string = new StringImpl();
-		return string;
+	public InterfaceType createInterfaceType() {
+		InterfaceTypeImpl interfaceType = new InterfaceTypeImpl();
+		return interfaceType;
 	}
 
 	/**
@@ -143,9 +134,9 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GraphQL.Boolean createBoolean() {
-		BooleanImpl boolean_ = new BooleanImpl();
-		return boolean_;
+	public EnumType createEnumType() {
+		EnumTypeImpl enumType = new EnumTypeImpl();
+		return enumType;
 	}
 
 	/**
@@ -153,29 +144,9 @@ public class GraphQLFactoryImpl extends EFactoryImpl implements GraphQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ID createID() {
-		IDImpl id = new IDImpl();
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GraphQL.Enum createEnum() {
-		EnumImpl enum_ = new EnumImpl();
-		return enum_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EnumValue createEnumValue() {
-		EnumValueImpl enumValue = new EnumValueImpl();
-		return enumValue;
+	public ScalarType createScalarType() {
+		ScalarTypeImpl scalarType = new ScalarTypeImpl();
+		return scalarType;
 	}
 
 	/**

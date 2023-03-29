@@ -6,8 +6,6 @@ import GraphQL.GraphQLPackage;
 import GraphQL.Schema;
 import GraphQL.Type;
 
-import java.lang.String;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

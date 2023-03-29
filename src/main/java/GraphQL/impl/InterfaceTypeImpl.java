@@ -2,8 +2,9 @@
  */
 package GraphQL.impl;
 
-import GraphQL.EnumValue;
+import GraphQL.Attribute;
 import GraphQL.GraphQLPackage;
+import GraphQL.InterfaceType;
 
 import java.util.Collection;
 
@@ -19,34 +20,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Enum</b></em>'.
+ * An implementation of the model object '<em><b>Interface Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link GraphQL.impl.EnumImpl#getEnumvalue <em>Enumvalue</em>}</li>
+ *   <li>{@link GraphQL.impl.InterfaceTypeImpl#getAttribute <em>Attribute</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EnumImpl extends TypeImpl implements GraphQL.Enum {
+public class InterfaceTypeImpl extends TypeImpl implements InterfaceType {
 	/**
-	 * The cached value of the '{@link #getEnumvalue() <em>Enumvalue</em>}' containment reference list.
+	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnumvalue()
+	 * @see #getAttribute()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EnumValue> enumvalue;
+	protected EList<Attribute> attribute;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnumImpl() {
+	protected InterfaceTypeImpl() {
 		super();
 	}
 
@@ -57,7 +58,7 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GraphQLPackage.Literals.ENUM;
+		return GraphQLPackage.Literals.INTERFACE_TYPE;
 	}
 
 	/**
@@ -65,11 +66,11 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EnumValue> getEnumvalue() {
-		if (enumvalue == null) {
-			enumvalue = new EObjectContainmentEList<EnumValue>(EnumValue.class, this, GraphQLPackage.ENUM__ENUMVALUE);
+	public EList<Attribute> getAttribute() {
+		if (attribute == null) {
+			attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, GraphQLPackage.INTERFACE_TYPE__ATTRIBUTE);
 		}
-		return enumvalue;
+		return attribute;
 	}
 
 	/**
@@ -80,8 +81,8 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM__ENUMVALUE:
-				return ((InternalEList<?>)getEnumvalue()).basicRemove(otherEnd, msgs);
+			case GraphQLPackage.INTERFACE_TYPE__ATTRIBUTE:
+				return ((InternalEList<?>)getAttribute()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -94,8 +95,8 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM__ENUMVALUE:
-				return getEnumvalue();
+			case GraphQLPackage.INTERFACE_TYPE__ATTRIBUTE:
+				return getAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,9 +110,9 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM__ENUMVALUE:
-				getEnumvalue().clear();
-				getEnumvalue().addAll((Collection<? extends EnumValue>)newValue);
+			case GraphQLPackage.INTERFACE_TYPE__ATTRIBUTE:
+				getAttribute().clear();
+				getAttribute().addAll((Collection<? extends Attribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,8 +126,8 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM__ENUMVALUE:
-				getEnumvalue().clear();
+			case GraphQLPackage.INTERFACE_TYPE__ATTRIBUTE:
+				getAttribute().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -140,10 +141,10 @@ public class EnumImpl extends TypeImpl implements GraphQL.Enum {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphQLPackage.ENUM__ENUMVALUE:
-				return enumvalue != null && !enumvalue.isEmpty();
+			case GraphQLPackage.INTERFACE_TYPE__ATTRIBUTE:
+				return attribute != null && !attribute.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //EnumImpl
+} //InterfaceTypeImpl

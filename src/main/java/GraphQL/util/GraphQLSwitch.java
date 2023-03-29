@@ -2,15 +2,7 @@
  */
 package GraphQL.util;
 
-import GraphQL.Attribute;
-import GraphQL.EnumValue;
-import GraphQL.GraphQLPackage;
-import GraphQL.ID;
-import GraphQL.Int;
-import GraphQL.ScalarType;
-import GraphQL.Schema;
-import GraphQL.SystemType;
-import GraphQL.Type;
+import GraphQL.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -92,70 +84,43 @@ public class GraphQLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GraphQLPackage.DIRECTIVE: {
+				Directive directive = (Directive)theEObject;
+				T result = caseDirective(directive);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphQLPackage.ARGUMENT: {
+				Argument argument = (Argument)theEObject;
+				T result = caseArgument(argument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphQLPackage.OBJECT_TYPE: {
+				ObjectType objectType = (ObjectType)theEObject;
+				T result = caseObjectType(objectType);
+				if (result == null) result = caseType(objectType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphQLPackage.INTERFACE_TYPE: {
+				InterfaceType interfaceType = (InterfaceType)theEObject;
+				T result = caseInterfaceType(interfaceType);
+				if (result == null) result = caseType(interfaceType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphQLPackage.ENUM_TYPE: {
+				EnumType enumType = (EnumType)theEObject;
+				T result = caseEnumType(enumType);
+				if (result == null) result = caseType(enumType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GraphQLPackage.SCALAR_TYPE: {
 				ScalarType scalarType = (ScalarType)theEObject;
 				T result = caseScalarType(scalarType);
 				if (result == null) result = caseType(scalarType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.SYSTEM_TYPE: {
-				SystemType systemType = (SystemType)theEObject;
-				T result = caseSystemType(systemType);
-				if (result == null) result = caseType(systemType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.INT: {
-				Int int_ = (Int)theEObject;
-				T result = caseInt(int_);
-				if (result == null) result = caseScalarType(int_);
-				if (result == null) result = caseType(int_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.FLOAT: {
-				GraphQL.Float float_ = (GraphQL.Float)theEObject;
-				T result = caseFloat(float_);
-				if (result == null) result = caseScalarType(float_);
-				if (result == null) result = caseType(float_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.STRING: {
-				GraphQL.String string = (GraphQL.String)theEObject;
-				T result = caseString(string);
-				if (result == null) result = caseScalarType(string);
-				if (result == null) result = caseType(string);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.BOOLEAN: {
-				GraphQL.Boolean boolean_ = (GraphQL.Boolean)theEObject;
-				T result = caseBoolean(boolean_);
-				if (result == null) result = caseScalarType(boolean_);
-				if (result == null) result = caseType(boolean_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.ID: {
-				ID id = (ID)theEObject;
-				T result = caseID(id);
-				if (result == null) result = caseScalarType(id);
-				if (result == null) result = caseType(id);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.ENUM: {
-				GraphQL.Enum enum_ = (GraphQL.Enum)theEObject;
-				T result = caseEnum(enum_);
-				if (result == null) result = caseType(enum_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphQLPackage.ENUM_VALUE: {
-				EnumValue enumValue = (EnumValue)theEObject;
-				T result = caseEnumValue(enumValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -209,6 +174,81 @@ public class GraphQLSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDirective(Directive object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArgument(Argument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectType(ObjectType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interface Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interface Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterfaceType(InterfaceType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enum Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enum Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumType(EnumType object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Scalar Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -220,126 +260,6 @@ public class GraphQLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseScalarType(ScalarType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>System Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>System Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSystemType(SystemType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Int</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Int</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInt(Int object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Float</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Float</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFloat(GraphQL.Float object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseString(GraphQL.String object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBoolean(GraphQL.Boolean object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseID(ID object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Enum</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Enum</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnum(GraphQL.Enum object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Enum Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Enum Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnumValue(EnumValue object) {
 		return null;
 	}
 

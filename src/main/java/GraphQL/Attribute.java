@@ -2,7 +2,7 @@
  */
 package GraphQL;
 
-import java.lang.String;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link GraphQL.Attribute#isIsArray <em>Is Array</em>}</li>
  *   <li>{@link GraphQL.Attribute#isIsNullable <em>Is Nullable</em>}</li>
  *   <li>{@link GraphQL.Attribute#getTypeName <em>Type Name</em>}</li>
+ *   <li>{@link GraphQL.Attribute#isIsNullableInArray <em>Is Nullable In Array</em>}</li>
+ *   <li>{@link GraphQL.Attribute#getDirective <em>Directive</em>}</li>
  * </ul>
  *
  * @see GraphQL.GraphQLPackage#getAttribute()
@@ -113,5 +115,39 @@ public interface Attribute extends EObject {
 	 * @generated
 	 */
 	void setTypeName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Nullable In Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Nullable In Array</em>' attribute.
+	 * @see #setIsNullableInArray(boolean)
+	 * @see GraphQL.GraphQLPackage#getAttribute_IsNullableInArray()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @generated
+	 */
+	boolean isIsNullableInArray();
+
+	/**
+	 * Sets the value of the '{@link GraphQL.Attribute#isIsNullableInArray <em>Is Nullable In Array</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Nullable In Array</em>' attribute.
+	 * @see #isIsNullableInArray()
+	 * @generated
+	 */
+	void setIsNullableInArray(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Directive</b></em>' containment reference list.
+	 * The list contents are of type {@link GraphQL.Directive}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Directive</em>' containment reference list.
+	 * @see GraphQL.GraphQLPackage#getAttribute_Directive()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Directive> getDirective();
 
 } // Attribute

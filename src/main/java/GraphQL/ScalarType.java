@@ -10,7 +10,7 @@ package GraphQL;
  *
  *
  * @see GraphQL.GraphQLPackage#getScalarType()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface ScalarType extends Type {

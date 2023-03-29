@@ -2,8 +2,6 @@
  */
 package GraphQL;
 
-import java.lang.String;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -78,13 +76,13 @@ public interface GraphQLPackage extends EPackage {
 	int TYPE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Directive</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__ATTRIBUTE = 1;
+	int TYPE__DIRECTIVE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -151,13 +149,31 @@ public interface GraphQLPackage extends EPackage {
 	int ATTRIBUTE__TYPE_NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Is Nullable In Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__IS_NULLABLE_IN_ARRAY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Directive</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__DIRECTIVE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = 4;
+	int ATTRIBUTE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -215,6 +231,254 @@ public interface GraphQLPackage extends EPackage {
 	int SCHEMA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link GraphQL.impl.DirectiveImpl <em>Directive</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphQL.impl.DirectiveImpl
+	 * @see GraphQL.impl.GraphQLPackageImpl#getDirective()
+	 * @generated
+	 */
+	int DIRECTIVE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTIVE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Argument</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTIVE__ARGUMENT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Directive</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTIVE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Directive</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTIVE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link GraphQL.impl.ArgumentImpl <em>Argument</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphQL.impl.ArgumentImpl
+	 * @see GraphQL.impl.GraphQLPackageImpl#getArgument()
+	 * @generated
+	 */
+	int ARGUMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link GraphQL.impl.ObjectTypeImpl <em>Object Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphQL.impl.ObjectTypeImpl
+	 * @see GraphQL.impl.GraphQLPackageImpl#getObjectType()
+	 * @generated
+	 */
+	int OBJECT_TYPE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Directive</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_TYPE__DIRECTIVE = TYPE__DIRECTIVE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_TYPE__ATTRIBUTE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Object Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Object Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link GraphQL.impl.InterfaceTypeImpl <em>Interface Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphQL.impl.InterfaceTypeImpl
+	 * @see GraphQL.impl.GraphQLPackageImpl#getInterfaceType()
+	 * @generated
+	 */
+	int INTERFACE_TYPE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Directive</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_TYPE__DIRECTIVE = TYPE__DIRECTIVE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_TYPE__ATTRIBUTE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Interface Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Interface Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link GraphQL.impl.EnumTypeImpl <em>Enum Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphQL.impl.EnumTypeImpl
+	 * @see GraphQL.impl.GraphQLPackageImpl#getEnumType()
+	 * @generated
+	 */
+	int ENUM_TYPE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Directive</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_TYPE__DIRECTIVE = TYPE__DIRECTIVE;
+
+	/**
+	 * The number of structural features of the '<em>Enum Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Enum Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link GraphQL.impl.ScalarTypeImpl <em>Scalar Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -222,7 +486,7 @@ public interface GraphQLPackage extends EPackage {
 	 * @see GraphQL.impl.GraphQLPackageImpl#getScalarType()
 	 * @generated
 	 */
-	int SCALAR_TYPE = 3;
+	int SCALAR_TYPE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -234,13 +498,13 @@ public interface GraphQLPackage extends EPackage {
 	int SCALAR_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Directive</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCALAR_TYPE__ATTRIBUTE = TYPE__ATTRIBUTE;
+	int SCALAR_TYPE__DIRECTIVE = TYPE__DIRECTIVE;
 
 	/**
 	 * The number of structural features of the '<em>Scalar Type</em>' class.
@@ -259,383 +523,6 @@ public interface GraphQLPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCALAR_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.SystemTypeImpl <em>System Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.SystemTypeImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getSystemType()
-	 * @generated
-	 */
-	int SYSTEM_TYPE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TYPE__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TYPE__ATTRIBUTE = TYPE__ATTRIBUTE;
-
-	/**
-	 * The number of structural features of the '<em>System Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>System Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.IntImpl <em>Int</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.IntImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getInt()
-	 * @generated
-	 */
-	int INT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT__NAME = SCALAR_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT__ATTRIBUTE = SCALAR_TYPE__ATTRIBUTE;
-
-	/**
-	 * The number of structural features of the '<em>Int</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_FEATURE_COUNT = SCALAR_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Int</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_OPERATION_COUNT = SCALAR_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.FloatImpl <em>Float</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.FloatImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getFloat()
-	 * @generated
-	 */
-	int FLOAT = 6;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT__NAME = SCALAR_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT__ATTRIBUTE = SCALAR_TYPE__ATTRIBUTE;
-
-	/**
-	 * The number of structural features of the '<em>Float</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT_FEATURE_COUNT = SCALAR_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Float</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT_OPERATION_COUNT = SCALAR_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.StringImpl <em>String</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.StringImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getString()
-	 * @generated
-	 */
-	int STRING = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING__NAME = SCALAR_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING__ATTRIBUTE = SCALAR_TYPE__ATTRIBUTE;
-
-	/**
-	 * The number of structural features of the '<em>String</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_FEATURE_COUNT = SCALAR_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>String</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_OPERATION_COUNT = SCALAR_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.BooleanImpl <em>Boolean</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.BooleanImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getBoolean()
-	 * @generated
-	 */
-	int BOOLEAN = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN__NAME = SCALAR_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN__ATTRIBUTE = SCALAR_TYPE__ATTRIBUTE;
-
-	/**
-	 * The number of structural features of the '<em>Boolean</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_FEATURE_COUNT = SCALAR_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Boolean</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_OPERATION_COUNT = SCALAR_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.IDImpl <em>ID</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.IDImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getID()
-	 * @generated
-	 */
-	int ID = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ID__NAME = SCALAR_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ID__ATTRIBUTE = SCALAR_TYPE__ATTRIBUTE;
-
-	/**
-	 * The number of structural features of the '<em>ID</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ID_FEATURE_COUNT = SCALAR_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>ID</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ID_OPERATION_COUNT = SCALAR_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.EnumImpl <em>Enum</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.EnumImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getEnum()
-	 * @generated
-	 */
-	int ENUM = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM__ATTRIBUTE = TYPE__ATTRIBUTE;
-
-	/**
-	 * The feature id for the '<em><b>Enumvalue</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM__ENUMVALUE = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Enum</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Enum</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link GraphQL.impl.EnumValueImpl <em>Enum Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GraphQL.impl.EnumValueImpl
-	 * @see GraphQL.impl.GraphQLPackageImpl#getEnumValue()
-	 * @generated
-	 */
-	int ENUM_VALUE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_VALUE__VALUE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_VALUE__NUMBER = 1;
-
-	/**
-	 * The number of structural features of the '<em>Enum Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_VALUE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Enum Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_VALUE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -660,15 +547,15 @@ public interface GraphQLPackage extends EPackage {
 	EAttribute getType_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link GraphQL.Type#getAttribute <em>Attribute</em>}'.
+	 * Returns the meta object for the containment reference list '{@link GraphQL.Type#getDirective <em>Directive</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attribute</em>'.
-	 * @see GraphQL.Type#getAttribute()
+	 * @return the meta object for the containment reference list '<em>Directive</em>'.
+	 * @see GraphQL.Type#getDirective()
 	 * @see #getType()
 	 * @generated
 	 */
-	EReference getType_Attribute();
+	EReference getType_Directive();
 
 	/**
 	 * Returns the meta object for class '{@link GraphQL.Attribute <em>Attribute</em>}'.
@@ -725,6 +612,28 @@ public interface GraphQLPackage extends EPackage {
 	EAttribute getAttribute_TypeName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link GraphQL.Attribute#isIsNullableInArray <em>Is Nullable In Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Nullable In Array</em>'.
+	 * @see GraphQL.Attribute#isIsNullableInArray()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_IsNullableInArray();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GraphQL.Attribute#getDirective <em>Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Directive</em>'.
+	 * @see GraphQL.Attribute#getDirective()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_Directive();
+
+	/**
 	 * Returns the meta object for class '{@link GraphQL.Schema <em>Schema</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,6 +666,122 @@ public interface GraphQLPackage extends EPackage {
 	EAttribute getSchema_Name();
 
 	/**
+	 * Returns the meta object for class '{@link GraphQL.Directive <em>Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Directive</em>'.
+	 * @see GraphQL.Directive
+	 * @generated
+	 */
+	EClass getDirective();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GraphQL.Directive#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see GraphQL.Directive#getName()
+	 * @see #getDirective()
+	 * @generated
+	 */
+	EAttribute getDirective_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GraphQL.Directive#getArgument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Argument</em>'.
+	 * @see GraphQL.Directive#getArgument()
+	 * @see #getDirective()
+	 * @generated
+	 */
+	EReference getDirective_Argument();
+
+	/**
+	 * Returns the meta object for class '{@link GraphQL.Argument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Argument</em>'.
+	 * @see GraphQL.Argument
+	 * @generated
+	 */
+	EClass getArgument();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GraphQL.Argument#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see GraphQL.Argument#getName()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EAttribute getArgument_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GraphQL.Argument#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see GraphQL.Argument#getValue()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EAttribute getArgument_Value();
+
+	/**
+	 * Returns the meta object for class '{@link GraphQL.ObjectType <em>Object Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Object Type</em>'.
+	 * @see GraphQL.ObjectType
+	 * @generated
+	 */
+	EClass getObjectType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GraphQL.ObjectType#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attribute</em>'.
+	 * @see GraphQL.ObjectType#getAttribute()
+	 * @see #getObjectType()
+	 * @generated
+	 */
+	EReference getObjectType_Attribute();
+
+	/**
+	 * Returns the meta object for class '{@link GraphQL.InterfaceType <em>Interface Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interface Type</em>'.
+	 * @see GraphQL.InterfaceType
+	 * @generated
+	 */
+	EClass getInterfaceType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GraphQL.InterfaceType#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attribute</em>'.
+	 * @see GraphQL.InterfaceType#getAttribute()
+	 * @see #getInterfaceType()
+	 * @generated
+	 */
+	EReference getInterfaceType_Attribute();
+
+	/**
+	 * Returns the meta object for class '{@link GraphQL.EnumType <em>Enum Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enum Type</em>'.
+	 * @see GraphQL.EnumType
+	 * @generated
+	 */
+	EClass getEnumType();
+
+	/**
 	 * Returns the meta object for class '{@link GraphQL.ScalarType <em>Scalar Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -765,119 +790,6 @@ public interface GraphQLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getScalarType();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.SystemType <em>System Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>System Type</em>'.
-	 * @see GraphQL.SystemType
-	 * @generated
-	 */
-	EClass getSystemType();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.Int <em>Int</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Int</em>'.
-	 * @see GraphQL.Int
-	 * @generated
-	 */
-	EClass getInt();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.Float <em>Float</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Float</em>'.
-	 * @see GraphQL.Float
-	 * @generated
-	 */
-	EClass getFloat();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.String <em>String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String</em>'.
-	 * @see GraphQL.String
-	 * @generated
-	 */
-	EClass getString();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.Boolean <em>Boolean</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean</em>'.
-	 * @see GraphQL.Boolean
-	 * @generated
-	 */
-	EClass getBoolean();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.ID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ID</em>'.
-	 * @see GraphQL.ID
-	 * @generated
-	 */
-	EClass getID();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.Enum <em>Enum</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Enum</em>'.
-	 * @see GraphQL.Enum
-	 * @generated
-	 */
-	EClass getEnum();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link GraphQL.Enum#getEnumvalue <em>Enumvalue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Enumvalue</em>'.
-	 * @see GraphQL.Enum#getEnumvalue()
-	 * @see #getEnum()
-	 * @generated
-	 */
-	EReference getEnum_Enumvalue();
-
-	/**
-	 * Returns the meta object for class '{@link GraphQL.EnumValue <em>Enum Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Enum Value</em>'.
-	 * @see GraphQL.EnumValue
-	 * @generated
-	 */
-	EClass getEnumValue();
-
-	/**
-	 * Returns the meta object for the attribute '{@link GraphQL.EnumValue#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see GraphQL.EnumValue#getValue()
-	 * @see #getEnumValue()
-	 * @generated
-	 */
-	EAttribute getEnumValue_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link GraphQL.EnumValue#getNumber <em>Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number</em>'.
-	 * @see GraphQL.EnumValue#getNumber()
-	 * @see #getEnumValue()
-	 * @generated
-	 */
-	EAttribute getEnumValue_Number();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -921,12 +833,12 @@ public interface GraphQLPackage extends EPackage {
 		EAttribute TYPE__NAME = eINSTANCE.getType_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Directive</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TYPE__ATTRIBUTE = eINSTANCE.getType_Attribute();
+		EReference TYPE__DIRECTIVE = eINSTANCE.getType_Directive();
 
 		/**
 		 * The meta object literal for the '{@link GraphQL.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -971,6 +883,22 @@ public interface GraphQLPackage extends EPackage {
 		EAttribute ATTRIBUTE__TYPE_NAME = eINSTANCE.getAttribute_TypeName();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Nullable In Array</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__IS_NULLABLE_IN_ARRAY = eINSTANCE.getAttribute_IsNullableInArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Directive</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__DIRECTIVE = eINSTANCE.getAttribute_Directive();
+
+		/**
 		 * The meta object literal for the '{@link GraphQL.impl.SchemaImpl <em>Schema</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -997,6 +925,104 @@ public interface GraphQLPackage extends EPackage {
 		EAttribute SCHEMA__NAME = eINSTANCE.getSchema_Name();
 
 		/**
+		 * The meta object literal for the '{@link GraphQL.impl.DirectiveImpl <em>Directive</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphQL.impl.DirectiveImpl
+		 * @see GraphQL.impl.GraphQLPackageImpl#getDirective()
+		 * @generated
+		 */
+		EClass DIRECTIVE = eINSTANCE.getDirective();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIRECTIVE__NAME = eINSTANCE.getDirective_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Argument</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIRECTIVE__ARGUMENT = eINSTANCE.getDirective_Argument();
+
+		/**
+		 * The meta object literal for the '{@link GraphQL.impl.ArgumentImpl <em>Argument</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphQL.impl.ArgumentImpl
+		 * @see GraphQL.impl.GraphQLPackageImpl#getArgument()
+		 * @generated
+		 */
+		EClass ARGUMENT = eINSTANCE.getArgument();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGUMENT__NAME = eINSTANCE.getArgument_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGUMENT__VALUE = eINSTANCE.getArgument_Value();
+
+		/**
+		 * The meta object literal for the '{@link GraphQL.impl.ObjectTypeImpl <em>Object Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphQL.impl.ObjectTypeImpl
+		 * @see GraphQL.impl.GraphQLPackageImpl#getObjectType()
+		 * @generated
+		 */
+		EClass OBJECT_TYPE = eINSTANCE.getObjectType();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OBJECT_TYPE__ATTRIBUTE = eINSTANCE.getObjectType_Attribute();
+
+		/**
+		 * The meta object literal for the '{@link GraphQL.impl.InterfaceTypeImpl <em>Interface Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphQL.impl.InterfaceTypeImpl
+		 * @see GraphQL.impl.GraphQLPackageImpl#getInterfaceType()
+		 * @generated
+		 */
+		EClass INTERFACE_TYPE = eINSTANCE.getInterfaceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_TYPE__ATTRIBUTE = eINSTANCE.getInterfaceType_Attribute();
+
+		/**
+		 * The meta object literal for the '{@link GraphQL.impl.EnumTypeImpl <em>Enum Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphQL.impl.EnumTypeImpl
+		 * @see GraphQL.impl.GraphQLPackageImpl#getEnumType()
+		 * @generated
+		 */
+		EClass ENUM_TYPE = eINSTANCE.getEnumType();
+
+		/**
 		 * The meta object literal for the '{@link GraphQL.impl.ScalarTypeImpl <em>Scalar Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1005,110 +1031,6 @@ public interface GraphQLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SCALAR_TYPE = eINSTANCE.getScalarType();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.SystemTypeImpl <em>System Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.SystemTypeImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getSystemType()
-		 * @generated
-		 */
-		EClass SYSTEM_TYPE = eINSTANCE.getSystemType();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.IntImpl <em>Int</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.IntImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getInt()
-		 * @generated
-		 */
-		EClass INT = eINSTANCE.getInt();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.FloatImpl <em>Float</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.FloatImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getFloat()
-		 * @generated
-		 */
-		EClass FLOAT = eINSTANCE.getFloat();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.StringImpl <em>String</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.StringImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getString()
-		 * @generated
-		 */
-		EClass STRING = eINSTANCE.getString();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.BooleanImpl <em>Boolean</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.BooleanImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getBoolean()
-		 * @generated
-		 */
-		EClass BOOLEAN = eINSTANCE.getBoolean();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.IDImpl <em>ID</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.IDImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getID()
-		 * @generated
-		 */
-		EClass ID = eINSTANCE.getID();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.EnumImpl <em>Enum</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.EnumImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getEnum()
-		 * @generated
-		 */
-		EClass ENUM = eINSTANCE.getEnum();
-
-		/**
-		 * The meta object literal for the '<em><b>Enumvalue</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENUM__ENUMVALUE = eINSTANCE.getEnum_Enumvalue();
-
-		/**
-		 * The meta object literal for the '{@link GraphQL.impl.EnumValueImpl <em>Enum Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphQL.impl.EnumValueImpl
-		 * @see GraphQL.impl.GraphQLPackageImpl#getEnumValue()
-		 * @generated
-		 */
-		EClass ENUM_VALUE = eINSTANCE.getEnumValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENUM_VALUE__VALUE = eINSTANCE.getEnumValue_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENUM_VALUE__NUMBER = eINSTANCE.getEnumValue_Number();
 
 	}
 

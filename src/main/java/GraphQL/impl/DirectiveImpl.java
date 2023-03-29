@@ -2,9 +2,9 @@
  */
 package GraphQL.impl;
 
+import GraphQL.Argument;
 import GraphQL.Directive;
 import GraphQL.GraphQLPackage;
-import GraphQL.Type;
 
 import java.util.Collection;
 
@@ -24,19 +24,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Type</b></em>'.
+ * An implementation of the model object '<em><b>Directive</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link GraphQL.impl.TypeImpl#getName <em>Name</em>}</li>
- *   <li>{@link GraphQL.impl.TypeImpl#getDirective <em>Directive</em>}</li>
+ *   <li>{@link GraphQL.impl.DirectiveImpl#getName <em>Name</em>}</li>
+ *   <li>{@link GraphQL.impl.DirectiveImpl#getArgument <em>Argument</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TypeImpl extends MinimalEObjectImpl.Container implements Type {
+public class DirectiveImpl extends MinimalEObjectImpl.Container implements Directive {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,21 +58,21 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDirective() <em>Directive</em>}' containment reference list.
+	 * The cached value of the '{@link #getArgument() <em>Argument</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDirective()
+	 * @see #getArgument()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Directive> directive;
+	protected EList<Argument> argument;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypeImpl() {
+	protected DirectiveImpl() {
 		super();
 	}
 
@@ -83,7 +83,7 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GraphQLPackage.Literals.TYPE;
+		return GraphQLPackage.Literals.DIRECTIVE;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GraphQLPackage.TYPE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphQLPackage.DIRECTIVE__NAME, oldName, name));
 	}
 
 	/**
@@ -112,11 +112,11 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Directive> getDirective() {
-		if (directive == null) {
-			directive = new EObjectContainmentEList<Directive>(Directive.class, this, GraphQLPackage.TYPE__DIRECTIVE);
+	public EList<Argument> getArgument() {
+		if (argument == null) {
+			argument = new EObjectContainmentEList<Argument>(Argument.class, this, GraphQLPackage.DIRECTIVE__ARGUMENT);
 		}
-		return directive;
+		return argument;
 	}
 
 	/**
@@ -127,8 +127,8 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphQLPackage.TYPE__DIRECTIVE:
-				return ((InternalEList<?>)getDirective()).basicRemove(otherEnd, msgs);
+			case GraphQLPackage.DIRECTIVE__ARGUMENT:
+				return ((InternalEList<?>)getArgument()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,10 +141,10 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphQLPackage.TYPE__NAME:
+			case GraphQLPackage.DIRECTIVE__NAME:
 				return getName();
-			case GraphQLPackage.TYPE__DIRECTIVE:
-				return getDirective();
+			case GraphQLPackage.DIRECTIVE__ARGUMENT:
+				return getArgument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,12 +158,12 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphQLPackage.TYPE__NAME:
+			case GraphQLPackage.DIRECTIVE__NAME:
 				setName((String)newValue);
 				return;
-			case GraphQLPackage.TYPE__DIRECTIVE:
-				getDirective().clear();
-				getDirective().addAll((Collection<? extends Directive>)newValue);
+			case GraphQLPackage.DIRECTIVE__ARGUMENT:
+				getArgument().clear();
+				getArgument().addAll((Collection<? extends Argument>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +177,11 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphQLPackage.TYPE__NAME:
+			case GraphQLPackage.DIRECTIVE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case GraphQLPackage.TYPE__DIRECTIVE:
-				getDirective().clear();
+			case GraphQLPackage.DIRECTIVE__ARGUMENT:
+				getArgument().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +195,10 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphQLPackage.TYPE__NAME:
+			case GraphQLPackage.DIRECTIVE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GraphQLPackage.TYPE__DIRECTIVE:
-				return directive != null && !directive.isEmpty();
+			case GraphQLPackage.DIRECTIVE__ARGUMENT:
+				return argument != null && !argument.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -219,4 +219,4 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 		return result.toString();
 	}
 
-} //TypeImpl
+} //DirectiveImpl

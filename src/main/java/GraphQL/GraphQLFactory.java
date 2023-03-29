@@ -40,76 +40,58 @@ public interface GraphQLFactory extends EFactory {
 	Schema createSchema();
 
 	/**
-	 * Returns a new object of class '<em>System Type</em>'.
+	 * Returns a new object of class '<em>Directive</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>System Type</em>'.
+	 * @return a new object of class '<em>Directive</em>'.
 	 * @generated
 	 */
-	SystemType createSystemType();
+	Directive createDirective();
 
 	/**
-	 * Returns a new object of class '<em>Int</em>'.
+	 * Returns a new object of class '<em>Argument</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Int</em>'.
+	 * @return a new object of class '<em>Argument</em>'.
 	 * @generated
 	 */
-	Int createInt();
+	Argument createArgument();
 
 	/**
-	 * Returns a new object of class '<em>Float</em>'.
+	 * Returns a new object of class '<em>Object Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Float</em>'.
+	 * @return a new object of class '<em>Object Type</em>'.
 	 * @generated
 	 */
-	Float createFloat();
+	ObjectType createObjectType();
 
 	/**
-	 * Returns a new object of class '<em>String</em>'.
+	 * Returns a new object of class '<em>Interface Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String</em>'.
+	 * @return a new object of class '<em>Interface Type</em>'.
 	 * @generated
 	 */
-	String createString();
+	InterfaceType createInterfaceType();
 
 	/**
-	 * Returns a new object of class '<em>Boolean</em>'.
+	 * Returns a new object of class '<em>Enum Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean</em>'.
+	 * @return a new object of class '<em>Enum Type</em>'.
 	 * @generated
 	 */
-	Boolean createBoolean();
+	EnumType createEnumType();
 
 	/**
-	 * Returns a new object of class '<em>ID</em>'.
+	 * Returns a new object of class '<em>Scalar Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID</em>'.
+	 * @return a new object of class '<em>Scalar Type</em>'.
 	 * @generated
 	 */
-	ID createID();
-
-	/**
-	 * Returns a new object of class '<em>Enum</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Enum</em>'.
-	 * @generated
-	 */
-	Enum createEnum();
-
-	/**
-	 * Returns a new object of class '<em>Enum Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Enum Value</em>'.
-	 * @generated
-	 */
-	EnumValue createEnumValue();
+	ScalarType createScalarType();
 
 	/**
 	 * Returns the package supported by this factory.

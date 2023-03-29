@@ -2,8 +2,6 @@
  */
 package GraphQL;
 
-import java.lang.String;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -33,7 +31,7 @@ public interface Schema extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference list.
 	 * @see GraphQL.GraphQLPackage#getSchema_Type()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Type> getType();

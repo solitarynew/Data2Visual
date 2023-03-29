@@ -2,15 +2,7 @@
  */
 package GraphQL.util;
 
-import GraphQL.Attribute;
-import GraphQL.EnumValue;
-import GraphQL.GraphQLPackage;
-import GraphQL.ID;
-import GraphQL.Int;
-import GraphQL.ScalarType;
-import GraphQL.Schema;
-import GraphQL.SystemType;
-import GraphQL.Type;
+import GraphQL.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -88,40 +80,28 @@ public class GraphQLAdapterFactory extends AdapterFactoryImpl {
 				return createSchemaAdapter();
 			}
 			@Override
+			public Adapter caseDirective(Directive object) {
+				return createDirectiveAdapter();
+			}
+			@Override
+			public Adapter caseArgument(Argument object) {
+				return createArgumentAdapter();
+			}
+			@Override
+			public Adapter caseObjectType(ObjectType object) {
+				return createObjectTypeAdapter();
+			}
+			@Override
+			public Adapter caseInterfaceType(InterfaceType object) {
+				return createInterfaceTypeAdapter();
+			}
+			@Override
+			public Adapter caseEnumType(EnumType object) {
+				return createEnumTypeAdapter();
+			}
+			@Override
 			public Adapter caseScalarType(ScalarType object) {
 				return createScalarTypeAdapter();
-			}
-			@Override
-			public Adapter caseSystemType(SystemType object) {
-				return createSystemTypeAdapter();
-			}
-			@Override
-			public Adapter caseInt(Int object) {
-				return createIntAdapter();
-			}
-			@Override
-			public Adapter caseFloat(GraphQL.Float object) {
-				return createFloatAdapter();
-			}
-			@Override
-			public Adapter caseString(GraphQL.String object) {
-				return createStringAdapter();
-			}
-			@Override
-			public Adapter caseBoolean(GraphQL.Boolean object) {
-				return createBooleanAdapter();
-			}
-			@Override
-			public Adapter caseID(ID object) {
-				return createIDAdapter();
-			}
-			@Override
-			public Adapter caseEnum(GraphQL.Enum object) {
-				return createEnumAdapter();
-			}
-			@Override
-			public Adapter caseEnumValue(EnumValue object) {
-				return createEnumValueAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -186,6 +166,76 @@ public class GraphQLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link GraphQL.Directive <em>Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphQL.Directive
+	 * @generated
+	 */
+	public Adapter createDirectiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link GraphQL.Argument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphQL.Argument
+	 * @generated
+	 */
+	public Adapter createArgumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link GraphQL.ObjectType <em>Object Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphQL.ObjectType
+	 * @generated
+	 */
+	public Adapter createObjectTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link GraphQL.InterfaceType <em>Interface Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphQL.InterfaceType
+	 * @generated
+	 */
+	public Adapter createInterfaceTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link GraphQL.EnumType <em>Enum Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphQL.EnumType
+	 * @generated
+	 */
+	public Adapter createEnumTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link GraphQL.ScalarType <em>Scalar Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -196,118 +246,6 @@ public class GraphQLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScalarTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.SystemType <em>System Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.SystemType
-	 * @generated
-	 */
-	public Adapter createSystemTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.Int <em>Int</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.Int
-	 * @generated
-	 */
-	public Adapter createIntAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.Float <em>Float</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.Float
-	 * @generated
-	 */
-	public Adapter createFloatAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.String <em>String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.String
-	 * @generated
-	 */
-	public Adapter createStringAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.Boolean <em>Boolean</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.Boolean
-	 * @generated
-	 */
-	public Adapter createBooleanAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.ID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.ID
-	 * @generated
-	 */
-	public Adapter createIDAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.Enum <em>Enum</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.Enum
-	 * @generated
-	 */
-	public Adapter createEnumAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GraphQL.EnumValue <em>Enum Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GraphQL.EnumValue
-	 * @generated
-	 */
-	public Adapter createEnumValueAdapter() {
 		return null;
 	}
 

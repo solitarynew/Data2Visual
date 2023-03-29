@@ -8,36 +8,36 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Type</b></em>'.
+ * A representation of the model object '<em><b>Directive</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link GraphQL.Type#getName <em>Name</em>}</li>
- *   <li>{@link GraphQL.Type#getDirective <em>Directive</em>}</li>
+ *   <li>{@link GraphQL.Directive#getName <em>Name</em>}</li>
+ *   <li>{@link GraphQL.Directive#getArgument <em>Argument</em>}</li>
  * </ul>
  *
- * @see GraphQL.GraphQLPackage#getType()
- * @model abstract="true"
+ * @see GraphQL.GraphQLPackage#getDirective()
+ * @model
  * @generated
  */
-public interface Type extends EObject {
+public interface Directive extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see GraphQL.GraphQLPackage#getType_Name()
+	 * @see GraphQL.GraphQLPackage#getDirective_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link GraphQL.Type#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link GraphQL.Directive#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -47,15 +47,15 @@ public interface Type extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Directive</b></em>' containment reference list.
-	 * The list contents are of type {@link GraphQL.Directive}.
+	 * Returns the value of the '<em><b>Argument</b></em>' containment reference list.
+	 * The list contents are of type {@link GraphQL.Argument}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Directive</em>' containment reference list.
-	 * @see GraphQL.GraphQLPackage#getType_Directive()
+	 * @return the value of the '<em>Argument</em>' containment reference list.
+	 * @see GraphQL.GraphQLPackage#getDirective_Argument()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Directive> getDirective();
+	EList<Argument> getArgument();
 
-} // Type
+} // Directive

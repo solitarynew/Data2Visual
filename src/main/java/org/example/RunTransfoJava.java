@@ -8,14 +8,17 @@ import org.eclipse.emf.ecore.EObject;
 import org.example.transform.compiler.AltToAsmConverter;
 import org.example.transform.Transformation;
 import org.example.transform.TransformationFactory;
+import org.neo4j.graphql.SchemaBuilder;
+import org.neo4j.graphql.SchemaConfig;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.Map;
 
 public class RunTransfoJava {
 
-    public static void main(String[] args) throws IOException {
+    public static void main1(String[] args) throws IOException {
         Launcher launcher = new Launcher();
 //        launcher.lunch(
 //                "MetaModels/company.ecore",
@@ -55,10 +58,25 @@ public class RunTransfoJava {
         // 读取resource文件夹下的文件
         String schema = new String(RunTransfoJava.class.getResourceAsStream("/type.graphql").readAllBytes(), StandardCharsets.UTF_8);
         TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
+        SchemaBuilder schemaBuilder = new SchemaBuilder(typeDefinitionRegistry, new SchemaConfig(
+                new SchemaConfig.CRUDConfig(),
+                new SchemaConfig.CRUDConfig(true, List.of()),
+                false, true, SchemaConfig.InputStyle.INPUT_TYPE, true, true));
+        schemaBuilder.augmentTypes();
+
         EList<EObject> res2 = transformation.transform(typeDefinitionRegistry);
         XMIParser.INSTANCE.save("c.xmi", res2);
     }
 
+
+    public static void main(String[] args) throws IOException {
+        String schema = new String(RunTransfoJava.class.getResourceAsStream("/type.graphql").readAllBytes(), StandardCharsets.UTF_8);
+        TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
+        EList<EObject> eObjects = TransformationFactory.INSTANCE
+                .getTransformation(TransformationFactory.TransformationType.Schema2GraphQLTransformation)
+                .transform(typeDefinitionRegistry);
+        XMIParser.INSTANCE.save("c.xmi", eObjects);
+    }
 
 
 }
