@@ -5,20 +5,17 @@ import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.example.transform.compiler.AltToAsmConverter;
 import org.example.transform.Transformation;
 import org.example.transform.TransformationFactory;
-import org.neo4j.graphql.SchemaBuilder;
-import org.neo4j.graphql.SchemaConfig;
+import org.example.transform.compiler.AltToAsmConverter;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.List;
 import java.util.Map;
 
 public class RunTransfoJava {
 
-    public static void main(String[] args) throws IOException {
+    public static void main2(String[] args) throws IOException {
         Launcher launcher = new Launcher();
 //        launcher.lunch(
 //                "MetaModels/company.ecore",
@@ -50,7 +47,7 @@ public class RunTransfoJava {
 
         Object res1 = TransformationFactory.INSTANCE
                 .getTransformation(TransformationFactory.TransformationType.View2AntDesignProTransformation)
-                .transform(eObjects);
+                .transform(eObjects, null);
         System.out.println(((Map) res1).get("BidSecurity"));
 
         Transformation transformation = TransformationFactory.INSTANCE
@@ -74,8 +71,21 @@ public class RunTransfoJava {
         TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
         EList<EObject> eObjects = TransformationFactory.INSTANCE
                 .getTransformation(TransformationFactory.TransformationType.Schema2GraphQLTransformation)
-                .transform(typeDefinitionRegistry);
+                .transform(typeDefinitionRegistry, null);
         XMIParser.INSTANCE.save("c.xmi", eObjects);
+    }
+
+    public static void main(String[] args) throws IOException {
+        String schema = new String(RunTransfoJava.class.getResourceAsStream("/type.graphql").readAllBytes(), StandardCharsets.UTF_8);
+        TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schema);
+        EList<EObject> eObjects = TransformationFactory.INSTANCE
+                .getTransformation(TransformationFactory.TransformationType.Schema2GraphQLTransformation)
+                .transform(typeDefinitionRegistry, null);
+        GraphQL.Schema schema1 = (GraphQL.Schema) eObjects.get(0);
+        Transformation transformation = TransformationFactory.INSTANCE
+                .getTransformation(TransformationFactory.TransformationType.graphQL2QueryOrMutationTransformation);
+        Map<String, String> res = (Map<String, String>) transformation.transform(eObjects, Map.of("template", "default_mutation.ftl"));
+        System.out.println(res.get("NormalInvoice"));
     }
 
 

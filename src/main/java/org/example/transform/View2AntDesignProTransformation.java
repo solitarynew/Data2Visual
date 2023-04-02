@@ -66,7 +66,7 @@ public class View2AntDesignProTransformation implements Transformation{
     private final List<String> IgnoreFields = List.of("_id");
 
     @Override
-    public Map<String, Pair<JsonArray, JsonArray>> transform(EList<EObject> o) {
+    public Map<String, Pair<JsonArray, JsonArray>> transform(EList<EObject> o, Map<String, Object> options) {
         Map<String, Pair<JsonArray, JsonArray>> map = new HashMap<>();
         for (EObject eObject : o) {
             if (eObject instanceof Schema) {

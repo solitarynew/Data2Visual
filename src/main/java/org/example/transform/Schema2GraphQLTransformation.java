@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
-import javax.lang.model.type.UnionType;
 import java.util.List;
+import java.util.Map;
 
 public class Schema2GraphQLTransformation implements Transformation{
 
     @Override
-    public EList<EObject> transform(Object o) {
+    public EList<EObject> transform(Object o, Map<String, Object> options) {
         if (!(o instanceof TypeDefinitionRegistry)) {
             throw new IllegalArgumentException("Source Model is not a TypeDefinitionRegistry");
         }

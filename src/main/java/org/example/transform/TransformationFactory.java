@@ -7,9 +7,12 @@ public class TransformationFactory {
 
     private Schema2GraphQLTransformation schema2GraphQLTransformation = new Schema2GraphQLTransformation();
 
+    private GraphQL2QueryOrMutationTransformation graphQL2QueryOrMutationTransformation = new GraphQL2QueryOrMutationTransformation();
+
     public static enum TransformationType {
         View2AntDesignProTransformation,
-        Schema2GraphQLTransformation
+        Schema2GraphQLTransformation,
+        graphQL2QueryOrMutationTransformation
     }
 
     public Transformation getTransformation(TransformationType transformationName) {
@@ -17,6 +20,8 @@ public class TransformationFactory {
             return view2AntDesignProTransformation;
         } else if (transformationName.equals(TransformationType.Schema2GraphQLTransformation)) {
             return schema2GraphQLTransformation;
+        } else if (transformationName.equals(TransformationType.graphQL2QueryOrMutationTransformation)) {
+            return graphQL2QueryOrMutationTransformation;
         } else {
             throw new UnsupportedOperationException("Not supported transformation");
         }
