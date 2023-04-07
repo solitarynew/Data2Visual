@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.example.graphql2view/src" modelPluginID="org.example.graphql2view"
+    modelName="GraphQL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>GraphQL.ecore</foreignModel>
+  <genPackages prefix="GraphQL" disposableProviderFactory="true" ecorePackage="GraphQL.ecore#/">
+    <genClasses image="false" ecoreClass="GraphQL.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Type/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphQL.ecore#//Type/directive"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Attribute/isArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Attribute/isNullable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Attribute/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Attribute/isNullableInArray"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphQL.ecore#//Attribute/directive"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphQL.ecore#//Schema/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Schema/name"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//Directive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Directive/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphQL.ecore#//Directive/argument"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Argument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphQL.ecore#//Argument/value"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//ObjectType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphQL.ecore#//ObjectType/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//InterfaceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphQL.ecore#//InterfaceType/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphQL.ecore#//EnumType"/>
+    <genClasses image="false" ecoreClass="GraphQL.ecore#//ScalarType"/>
+  </genPackages>
+</genmodel:GenModel>

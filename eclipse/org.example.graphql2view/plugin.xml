@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated graphql -->
+      <package
+            uri="http://www.example.org/Graphql"
+            class="Graphql.GraphqlPackage"
+            genModel="metamodel/graphql.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated view -->
+      <package
+            uri="http://www.example.org/View"
+            class="View.ViewPackage"
+            genModel="metamodel/View.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated GraphQL -->
+      <package
+            uri="http://www.example.org/GraphQL"
+            class="GraphQL.GraphQLPackage"
+            genModel="metamodel/GraphQL.genmodel"/>
+   </extension>
+
+</plugin>

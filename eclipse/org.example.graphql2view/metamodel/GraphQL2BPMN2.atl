@@ -1,0 +1,14 @@
+-- @path GraphQL=metamodel/GraphQL.ecore
+-- @path View=metamodel/BPMN2.ecore
+
+module GraphQL2BPMN2;
+create OUT : BPMN2 from IN : GraphQL;
+
+rule Type2bpmn {
+	from 
+			s: GraphQL!ObjectType
+	to
+			t: BPMN2!Definitions(
+				
+			)
+}

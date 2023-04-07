@@ -1,0 +1,28 @@
+-- @path GraphQL=metamodel/GraphQL.ecore
+-- @path View=metamodel/View.ecore
+
+module GraphQL2View;
+create OUT : View from IN : GraphQL;
+
+rule Type2Schema {
+	from 
+			s: GraphQL!ObjectType
+	to
+			t: View!Schema (
+				name <- s.name,
+				items <- s.attribute->collect(a | thisModule.Attribute2Item(a))
+			)
+}
+
+
+lazy rule Attribute2Item {
+	from 
+			s: GraphQL!Attribute
+	to
+			t: View!Item (
+				name <- s.name,
+				dataIndex <- s.name,
+				type <- s.typeName
+			)
+}
+

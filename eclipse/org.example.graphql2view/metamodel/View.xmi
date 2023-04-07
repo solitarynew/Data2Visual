@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:View="http://www.example.org/View">
+  <View:Schema name="AdministrationExpenditure">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+    <items name="detail" type="String">
+      <dataIndex>detail</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="SalesExpenditure">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+    <items name="detail" type="String">
+      <dataIndex>detail</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="GeneralManagerOfficeExpenditure">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+    <items name="detail" type="String">
+      <dataIndex>detail</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="BidSecurity">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+    <items name="client" type="String">
+      <dataIndex>client</dataIndex>
+    </items>
+    <items name="projectName" type="String">
+      <dataIndex>projectName</dataIndex>
+    </items>
+    <items name="expectWithdrawTime" type="String">
+      <dataIndex>expectWithdrawTime</dataIndex>
+    </items>
+    <items name="payCompany" type="String">
+      <dataIndex>payCompany</dataIndex>
+    </items>
+    <items name="receiveCompany" type="String">
+      <dataIndex>receiveCompany</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="String">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+    <items name="recoveryRecords" type="RecoveryRecord">
+      <dataIndex>recoveryRecords</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="RecoveryRecord">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="time" type="_Neo4jDateTime">
+      <dataIndex>time</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="bidSecurity" type="BidSecurity">
+      <dataIndex>bidSecurity</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="CashExpenditure">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="CashIncome">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="AdvancedPayment">
+    <items name="id" type="ID">
+      <dataIndex>id</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+    <items name="client" type="String">
+      <dataIndex>client</dataIndex>
+    </items>
+    <items name="contacter" type="String">
+      <dataIndex>contacter</dataIndex>
+    </items>
+    <items name="detail" type="String">
+      <dataIndex>detail</dataIndex>
+    </items>
+    <items name="invoiceNumber" type="String">
+      <dataIndex>invoiceNumber</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="UnconfirmedAmount">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="tradeDate" type="String">
+      <dataIndex>tradeDate</dataIndex>
+    </items>
+    <items name="client" type="String">
+      <dataIndex>client</dataIndex>
+    </items>
+    <items name="clientCompany" type="String">
+      <dataIndex>clientCompany</dataIndex>
+    </items>
+    <items name="company" type="String">
+      <dataIndex>company</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="month" type="String">
+      <dataIndex>month</dataIndex>
+    </items>
+    <items name="details" type="Detail">
+      <dataIndex>details</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="Detail">
+    <items name="id" type="ID">
+      <dataIndex>id</dataIndex>
+    </items>
+    <items name="accountID" type="String">
+      <dataIndex>accountID</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+    <items name="money" type="Float">
+      <dataIndex>money</dataIndex>
+    </items>
+    <items name="unconfirmedAmount" type="UnconfirmedAmount">
+      <dataIndex>unconfirmedAmount</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="NormalInvoice">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+    <items name="accType" type="String">
+      <dataIndex>accType</dataIndex>
+    </items>
+    <items name="company" type="String">
+      <dataIndex>company</dataIndex>
+    </items>
+    <items name="client" type="String">
+      <dataIndex>client</dataIndex>
+    </items>
+    <items name="contacter" type="String">
+      <dataIndex>contacter</dataIndex>
+    </items>
+    <items name="invoiceNumber" type="String">
+      <dataIndex>invoiceNumber</dataIndex>
+    </items>
+    <items name="product" type="String">
+      <dataIndex>product</dataIndex>
+    </items>
+    <items name="payDate" type="String">
+      <dataIndex>payDate</dataIndex>
+    </items>
+    <items name="payMode" type="String">
+      <dataIndex>payMode</dataIndex>
+    </items>
+    <items name="giveMoney" type="Float">
+      <dataIndex>giveMoney</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="paid" type="Boolean">
+      <dataIndex>paid</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="normalMoney" type="Float">
+      <dataIndex>normalMoney</dataIndex>
+    </items>
+    <items name="totalMoney" type="Float">
+      <dataIndex>totalMoney</dataIndex>
+    </items>
+    <items name="invoiceDetail" type="InvoiceDetail">
+      <dataIndex>invoiceDetail</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="BorrowingInvoice">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+    <items name="accType" type="String">
+      <dataIndex>accType</dataIndex>
+    </items>
+    <items name="company" type="String">
+      <dataIndex>company</dataIndex>
+    </items>
+    <items name="client" type="String">
+      <dataIndex>client</dataIndex>
+    </items>
+    <items name="contacter" type="String">
+      <dataIndex>contacter</dataIndex>
+    </items>
+    <items name="invoiceNumber" type="String">
+      <dataIndex>invoiceNumber</dataIndex>
+    </items>
+    <items name="product" type="String">
+      <dataIndex>product</dataIndex>
+    </items>
+    <items name="payDate" type="String">
+      <dataIndex>payDate</dataIndex>
+    </items>
+    <items name="payMode" type="String">
+      <dataIndex>payMode</dataIndex>
+    </items>
+    <items name="giveMoney" type="Float">
+      <dataIndex>giveMoney</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="paid" type="Boolean">
+      <dataIndex>paid</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="rentMoney" type="Float">
+      <dataIndex>rentMoney</dataIndex>
+    </items>
+    <items name="totalMoney" type="Float">
+      <dataIndex>totalMoney</dataIndex>
+    </items>
+    <items name="invoiceDetail" type="InvoiceDetail">
+      <dataIndex>invoiceDetail</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="NormalAndBorrowingInvoice">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="date" type="String">
+      <dataIndex>date</dataIndex>
+    </items>
+    <items name="saler" type="String">
+      <dataIndex>saler</dataIndex>
+    </items>
+    <items name="accType" type="String">
+      <dataIndex>accType</dataIndex>
+    </items>
+    <items name="company" type="String">
+      <dataIndex>company</dataIndex>
+    </items>
+    <items name="client" type="String">
+      <dataIndex>client</dataIndex>
+    </items>
+    <items name="contacter" type="String">
+      <dataIndex>contacter</dataIndex>
+    </items>
+    <items name="invoiceNumber" type="String">
+      <dataIndex>invoiceNumber</dataIndex>
+    </items>
+    <items name="product" type="String">
+      <dataIndex>product</dataIndex>
+    </items>
+    <items name="payDate" type="String">
+      <dataIndex>payDate</dataIndex>
+    </items>
+    <items name="payMode" type="String">
+      <dataIndex>payMode</dataIndex>
+    </items>
+    <items name="giveMoney" type="Float">
+      <dataIndex>giveMoney</dataIndex>
+    </items>
+    <items name="comment" type="String">
+      <dataIndex>comment</dataIndex>
+    </items>
+    <items name="paid" type="Boolean">
+      <dataIndex>paid</dataIndex>
+    </items>
+    <items name="createAt" type="_Neo4jDateTime">
+      <dataIndex>createAt</dataIndex>
+    </items>
+    <items name="serialNumber" type="String">
+      <dataIndex>serialNumber</dataIndex>
+    </items>
+    <items name="dlt" type="Boolean">
+      <dataIndex>dlt</dataIndex>
+    </items>
+    <items name="normalMoney" type="Float">
+      <dataIndex>normalMoney</dataIndex>
+    </items>
+    <items name="rentMoney" type="Float">
+      <dataIndex>rentMoney</dataIndex>
+    </items>
+    <items name="totalMoney" type="Float">
+      <dataIndex>totalMoney</dataIndex>
+    </items>
+    <items name="MoneySum" type="Float">
+      <dataIndex>MoneySum</dataIndex>
+    </items>
+    <items name="normalInvoiceDetail" type="InvoiceDetail">
+      <dataIndex>normalInvoiceDetail</dataIndex>
+    </items>
+    <items name="borrowingInvoiceDetail" type="InvoiceDetail">
+      <dataIndex>borrowingInvoiceDetail</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="InvoiceDetail">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="OutgoingMoney" type="Float">
+      <dataIndex>OutgoingMoney</dataIndex>
+    </items>
+    <items name="invoice" type="Invoice">
+      <dataIndex>invoice</dataIndex>
+    </items>
+    <items name="storeItemSchemas" type="StoreItemSchema">
+      <dataIndex>storeItemSchemas</dataIndex>
+    </items>
+  </View:Schema>
+  <View:Schema name="StoreItemSchema">
+    <items name="_id" type="ID">
+      <dataIndex>_id</dataIndex>
+    </items>
+    <items name="IngoingNumber" type="String">
+      <dataIndex>IngoingNumber</dataIndex>
+    </items>
+    <items name="OutgoingNumber" type="String">
+      <dataIndex>OutgoingNumber</dataIndex>
+    </items>
+    <items name="OutgoingDate" type="_Neo4jDateTime">
+      <dataIndex>OutgoingDate</dataIndex>
+    </items>
+    <items name="Money" type="Float">
+      <dataIndex>Money</dataIndex>
+    </items>
+    <items name="invoiceDetail" type="InvoiceDetail">
+      <dataIndex>invoiceDetail</dataIndex>
+    </items>
+  </View:Schema>
+</xmi:XMI>
