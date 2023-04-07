@@ -36,6 +36,12 @@
             <name>ATL Snapshots</name>
             <url>https://repo.eclipse.org/content/groups/snapshots/</url>
         </repository>
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/public/</url>
+            <layout>default</layout>
+        </repository>
     </repositories>
 
 
@@ -97,6 +103,12 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.31</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>org.eclipse.bpmn2</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+
     </dependencies>
 
 
